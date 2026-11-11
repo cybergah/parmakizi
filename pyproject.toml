@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parmakizi"
+dynamic = ["version"]
+description = "Find where a username exists across the public web — a fast, privacy-friendly OSINT CLI."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Cybergah" }]
+requires-python = ">=3.9"
+dependencies = ["httpx>=0.27"]
+keywords = ["osint", "username", "reconnaissance", "security", "digital-footprint", "cli"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: Information Technology",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Internet",
+]
+
+[project.optional-dependencies]
+socks = ["httpx[socks]>=0.27"]
+
+[project.urls]
+Homepage = "https://parmakizi.cybergah.com"
+Source = "https://github.com/cybergah/parmakizi"
+Issues = "https://github.com/cybergah/parmakizi/issues"
+
+[project.scripts]
+parmakizi = "parmakizi.cli:main"
+
+[tool.setuptools]
+packages = ["parmakizi"]
+
+[tool.setuptools.dynamic]
+version = { attr = "parmakizi.__version__" }
+
+[tool.setuptools.package-data]
+parmakizi = ["sites.json"]
