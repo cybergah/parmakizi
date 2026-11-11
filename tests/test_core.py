@@ -12,7 +12,8 @@ import unittest
 import httpx
 
 from parmakizi.cli import main
-from parmakizi.core import Site, Status, check_site, classify, filter_sites, load_sites, make_client, search
+from parmakizi.core import Result, Site, Status, check_site, classify, filter_sites, load_sites, make_client, search
+from parmakizi.selftest import Health
 
 
 def site(**kw) -> Site:
@@ -177,6 +178,28 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(len(results), 10)
         self.assertEqual(len(got), 10)
         self.assertEqual(sorted(r.site for r in results if r.status is Status.FOUND), ["S1", "S7"])
+
+
+class HealthTests(unittest.TestCase):
+    def health(self, claimed, random):
+        mk = lambda s: Result("X", "u", s, "https://x.test/u")  # noqa: E731
+        return Health("X", claimed is Status.FOUND and random is Status.NOT_FOUND, mk(claimed), mk(random))
+
+    def test_ok(self):
+        h = self.health(Status.FOUND, Status.NOT_FOUND)
+        self.assertTrue(h.ok)
+        self.assertFalse(h.broken)
+
+    def test_wrong_answers_are_broken(self):
+        self.assertTrue(self.health(Status.NOT_FOUND, Status.NOT_FOUND).broken)
+        self.assertTrue(self.health(Status.FOUND, Status.FOUND).broken)
+
+    def test_rate_limits_and_errors_are_inconclusive(self):
+        for claimed, random in [(Status.UNKNOWN, Status.UNKNOWN), (Status.ERROR, Status.NOT_FOUND), (Status.FOUND, Status.UNKNOWN)]:
+            with self.subTest(claimed=claimed, random=random):
+                h = self.health(claimed, random)
+                self.assertFalse(h.ok)
+                self.assertFalse(h.broken)
 
 
 class CliTests(unittest.TestCase):
