@@ -1,0 +1,26 @@
+name: Site health
+
+# Websites change. Once a week, check that every detection rule still works
+# against the live sites. A red run means a rule needs updating.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - run: python -m pip install .
+
+      - name: Check every rule against the live sites
+        run: parmakizi --self-test --no-color
