@@ -1,0 +1,33 @@
+name: Bug report
+description: Something does not work, or a site gives a wrong result
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the command you ran and what you expected instead.
+      placeholder: |
+        parmakizi someuser -s GitHub
+        Expected: found. Got: not found.
+    validations:
+      required: true
+  - type: textarea
+    id: selftest
+    attributes:
+      label: Output of `parmakizi --self-test` (if it is about a site)
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `parmakizi --version`
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Linux, Windows, macOS, Other]
+    validations:
+      required: true
