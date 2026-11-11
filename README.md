@@ -8,17 +8,17 @@ A fast, privacy-friendly OSINT command-line tool. *Parmak izi* means *fingerprin
 
 [![CI](https://github.com/cybergah/parmakizi/actions/workflows/ci.yml/badge.svg)](https://github.com/cybergah/parmakizi/actions/workflows/ci.yml)
 [![Site health](https://github.com/cybergah/parmakizi/actions/workflows/site-health.yml/badge.svg)](https://github.com/cybergah/parmakizi/actions/workflows/site-health.yml)
-[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://github.com/cybergah/parmakizi/blob/main/pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cybergah/parmakizi/blob/main/LICENSE)
 
-[Web version](https://parmakizi.cybergah.com) · [Supported sites](#supported-sites) · [Add a site](CONTRIBUTING.md)
+[Web version](https://parmakizi.cybergah.com) · [Supported sites](#supported-sites) · [Add a site](https://github.com/cybergah/parmakizi/blob/main/CONTRIBUTING.md)
 
 </div>
 
 ---
 
 <p align="center">
-  <img src="docs/parmakizi-demo.gif" alt="Parmak İzi checking the username torvalds on 32 sites: 18 accounts found in about a second" width="720">
+  <img src="https://raw.githubusercontent.com/cybergah/parmakizi/main/docs/parmakizi-demo.gif" alt="Parmak İzi checking the username torvalds on 32 sites: 18 accounts found in about a second" width="720">
 </p>
 
 ## Why another username tool?
@@ -96,7 +96,7 @@ Hashnode · Hacker News · Hugging Face · Kaggle · Codeforces · Trello
 **Gaming:** Steam · Chess.com · Lichess
 
 Run `parmakizi --list-sites` for the full list with URLs. Missing a site?
-[Adding one](CONTRIBUTING.md) is a single line of JSON.
+[Adding one](https://github.com/cybergah/parmakizi/blob/main/CONTRIBUTING.md) is a single line of JSON.
 
 ## Responsible use
 
@@ -112,12 +112,12 @@ that apply to you and with each site's terms.
 ## Contributing
 
 New site rules, bug reports and fixes are welcome. See
-[CONTRIBUTING.md](CONTRIBUTING.md). To report a security issue, please follow
+[CONTRIBUTING.md](https://github.com/cybergah/parmakizi/blob/main/CONTRIBUTING.md). To report a security issue, please follow
 the [security policy](https://github.com/cybergah/.github/blob/main/SECURITY.md).
 
 ## License
 
-[MIT](LICENSE) © Cybergah
+[MIT](https://github.com/cybergah/parmakizi/blob/main/LICENSE) © Cybergah
 
 <div align="center">
 <sub>Part of <a href="https://github.com/cybergah">Cybergah</a>, offline-first, privacy-respecting open-source tools.</sub>
