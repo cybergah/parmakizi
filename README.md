@@ -17,19 +17,9 @@ A fast, privacy-friendly OSINT command-line tool. *Parmak izi* means *fingerprin
 
 ---
 
-```text
-$ parmakizi torvalds
-
-» torvalds  (32 sites)
-  [+] Bitbucket                    https://bitbucket.org/torvalds/
-  [+] Docker Hub                   https://hub.docker.com/u/torvalds
-  [+] GitHub                       https://github.com/torvalds
-  [+] Keybase                      https://keybase.io/torvalds
-  [+] Mastodon (mastodon.social)   https://mastodon.social/@torvalds
-  [+] Wikipedia                    https://en.wikipedia.org/wiki/User:torvalds
-  ...
-  18 found · 32 checked
-```
+<p align="center">
+  <img src="docs/parmakizi-demo.gif" alt="Parmak İzi checking the username torvalds on 32 sites: 18 accounts found in about a second" width="720">
+</p>
 
 ## Why another username tool?
 
