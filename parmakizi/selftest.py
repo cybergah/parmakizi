@@ -25,6 +25,17 @@ class Health:
     random: Result
 
     @property
+    def broken(self) -> bool:
+        """A definite wrong answer, so the rule itself needs fixing.
+
+        Anything else that is not ok (rate limiting, timeouts, odd status codes)
+        is inconclusive: it says more about the network than about the rule.
+        """
+        if self.claimed is None:
+            return True
+        return self.claimed.status is Status.NOT_FOUND or self.random.status is Status.FOUND
+
+    @property
     def reason(self) -> str:
         if self.ok:
             return "ok"
