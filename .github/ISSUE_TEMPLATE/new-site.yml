@@ -1,0 +1,43 @@
+name: Suggest a site
+description: Propose a platform Parmak İzi should check
+title: "Add site: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! A site can only be added if its result is **reliable**: a known
+        account must be found and a random name must not. Sites behind bot
+        challenges (Cloudflare "Just a moment…") usually cannot be supported.
+  - type: input
+    id: name
+    attributes:
+      label: Site name
+      placeholder: Example
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public profile URL
+      description: Use {u} where the username goes.
+      placeholder: https://example.com/{u}
+    validations:
+      required: true
+  - type: input
+    id: claimed
+    attributes:
+      label: A username that exists there
+      description: Used by --self-test. A well-known public account is best.
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Public API (optional)
+      description: If the site has a public JSON endpoint for profiles, paste it here (with {u}).
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: What does the site return for a missing user (HTTP status, page text)?
