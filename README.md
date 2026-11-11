@@ -8,7 +8,7 @@ A fast, privacy-friendly OSINT command-line tool. *Parmak izi* means *fingerprin
 
 [![CI](https://github.com/cybergah/parmakizi/actions/workflows/ci.yml/badge.svg)](https://github.com/cybergah/parmakizi/actions/workflows/ci.yml)
 [![Site health](https://github.com/cybergah/parmakizi/actions/workflows/site-health.yml/badge.svg)](https://github.com/cybergah/parmakizi/actions/workflows/site-health.yml)
-[![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [Web version](https://parmakizi.cybergah.com) · [Supported sites](#supported-sites) · [Add a site](CONTRIBUTING.md)
@@ -59,7 +59,7 @@ For SOCKS/Tor proxy support:
 pip install "parmakizi[socks] @ git+https://github.com/cybergah/parmakizi"
 ```
 
-Requires Python 3.9 or newer. Works on Linux, macOS and Windows.
+Requires Python 3.10 or newer. Works on Linux, macOS and Windows.
 
 ## Usage
 
