@@ -86,14 +86,18 @@ print([r.url for r in results if r.status is Status.FOUND])
 
 ## Supported sites
 
-32 platforms in the first release, every one verified with `--self-test`:
+52 platforms, every one verified with `--self-test`:
 
-**Developer:** GitHub · GitLab · Codeberg · Bitbucket · Docker Hub · dev.to ·
-Hashnode · Hacker News · Hugging Face · Kaggle · Codeforces · Trello  
-**Security:** HackerOne · TryHackMe · Keybase  
-**Social:** Telegram · Bluesky · Mastodon · Gravatar · About.me · Duolingo · Wikipedia  
-**Media:** YouTube · Twitch · Vimeo · SoundCloud · Flickr · Dribbble · Instructables  
-**Gaming:** Steam · Chess.com · Lichess
+**Developer:** GitHub · GitLab · Codeberg · Gitea · SourceHut · Bitbucket · Docker Hub ·
+crates.io · RubyGems · Packagist · dev.to · Hashnode · Hacker News · Lobsters ·
+Hugging Face · Kaggle · Codeforces · AtCoder · Codewars · Exercism · Scratch ·
+Speaker Deck · Trello  
+**Security:** HackerOne · Bugcrowd · TryHackMe · Keybase  
+**Social:** Telegram · Bluesky · Mastodon · Lemmy · VK · Gravatar · About.me ·
+Duolingo · Gumroad · Wikipedia  
+**Media:** YouTube · Twitch · Vimeo · SoundCloud · Mixcloud · Flickr · Dribbble ·
+Substack · Wattpad · Instructables  
+**Gaming:** Steam · Minecraft · Speedrun.com · Chess.com · Lichess
 
 Run `parmakizi --list-sites` for the full list with URLs. Missing a site?
 [Adding one](https://github.com/cybergah/parmakizi/blob/main/CONTRIBUTING.md) is a single line of JSON.
