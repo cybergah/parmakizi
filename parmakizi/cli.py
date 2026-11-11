@@ -142,12 +142,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     if args.self_test:
         health = asyncio.run(self_test(sites, timeout=args.timeout, proxy=args.proxy))
-        bad = [h for h in health if not h.ok]
-        for h in sorted(health, key=lambda h: (h.ok, h.site)):
-            line = f"{'OK ' if h.ok else 'BAD'} {h.site:<28} {h.reason}"
-            print(st.green(line) if h.ok else st.red(line))
-        print(f"\n{len(health) - len(bad)}/{len(health)} rules healthy")
-        return 1 if bad else 0
+        broken = [h for h in health if h.broken]
+        skipped = [h for h in health if not h.ok and not h.broken]
+        order = {"BAD": 0, "SKIP": 1, "OK ": 2}
+        rows = [("OK " if h.ok else "BAD" if h.broken else "SKIP", h) for h in health]
+        for label, h in sorted(rows, key=lambda r: (order[r[0]], r[1].site)):
+            line = f"{label:<4} {h.site:<28} {h.reason}"
+            print(st.green(line) if label == "OK " else st.red(line) if label == "BAD" else st.yellow(line))
+        ok = len(health) - len(broken) - len(skipped)
+        print(f"\n{ok}/{len(health)} rules healthy, {len(broken)} broken, {len(skipped)} inconclusive (rate limit / network)")
+        return 1 if broken else 0
 
     if not args.usernames:
         build_parser().print_usage(sys.stderr)
