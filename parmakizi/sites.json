@@ -34,6 +34,7 @@
     {"name": "Mastodon (mastodon.social)", "url": "https://mastodon.social/@{u}", "probe": "https://mastodon.social/api/v1/accounts/lookup?acct={u}", "tags": ["social"], "claimed": "Gargron"},
     {"name": "Minecraft", "url": "https://namemc.com/profile/{u}", "probe": "https://api.mojang.com/users/profiles/minecraft/{u}", "missing_status": [204, 404], "tags": ["gaming"], "claimed": "Notch"},
     {"name": "Mixcloud", "url": "https://www.mixcloud.com/{u}/", "probe": "https://api.mixcloud.com/{u}/", "tags": ["music"], "claimed": "spartacus"},
+    {"name": "npm", "url": "https://www.npmjs.com/~{u}", "probe": "https://registry.npmjs.org/-/v1/search?text=maintainer:{u}&size=5", "detect": "message", "missing_text": ["\"objects\":[]"], "present_text": ["\"objects\":[{"], "tags": ["dev"], "claimed": "isaacs"},
     {"name": "Packagist", "url": "https://packagist.org/users/{u}/", "tags": ["dev"], "claimed": "seldaek"},
     {"name": "RubyGems", "url": "https://rubygems.org/profiles/{u}", "probe": "https://rubygems.org/api/v1/profiles/{u}.json", "tags": ["dev"], "claimed": "tenderlove"},
     {"name": "Scratch", "url": "https://scratch.mit.edu/users/{u}/", "probe": "https://api.scratch.mit.edu/users/{u}", "tags": ["dev"], "claimed": "griffpatch"},
