@@ -11,6 +11,7 @@
     {"name": "Codewars", "url": "https://www.codewars.com/users/{u}", "probe": "https://www.codewars.com/api/v1/users/{u}", "tags": ["dev"], "claimed": "jhoffner"},
     {"name": "crates.io", "url": "https://crates.io/users/{u}", "probe": "https://crates.io/api/v1/users/{u}", "tags": ["dev"], "claimed": "dtolnay"},
     {"name": "dev.to", "url": "https://dev.to/{u}", "probe": "https://dev.to/api/users/by_username?url={u}", "tags": ["dev", "blog"], "claimed": "ben"},
+    {"name": "DeviantArt", "url": "https://www.deviantart.com/{u}", "tags": ["design"], "claimed": "spyed"},
     {"name": "Docker Hub", "url": "https://hub.docker.com/u/{u}", "probe": "https://hub.docker.com/v2/users/{u}/", "tags": ["dev"], "claimed": "library"},
     {"name": "Dribbble", "url": "https://dribbble.com/{u}", "tags": ["design"], "claimed": "dribbble"},
     {"name": "Duolingo", "url": "https://www.duolingo.com/profile/{u}", "probe": "https://www.duolingo.com/2017-06-30/users?username={u}", "detect": "message", "missing_text": ["\"users\":[]"], "present_text": ["\"username\""], "tags": ["social"], "claimed": "luis"},
