@@ -37,6 +37,7 @@
     {"name": "Medium", "url": "https://medium.com/@{u}", "probe": "https://medium.com/feed/@{u}", "tags": ["blog", "social"], "claimed": "ev"},
     {"name": "Minecraft", "url": "https://namemc.com/profile/{u}", "probe": "https://api.mojang.com/users/profiles/minecraft/{u}", "missing_status": [204, 404], "tags": ["gaming"], "claimed": "Notch"},
     {"name": "Mixcloud", "url": "https://www.mixcloud.com/{u}/", "probe": "https://api.mixcloud.com/{u}/", "tags": ["music"], "claimed": "spartacus"},
+    {"name": "npm", "url": "https://www.npmjs.com/~{u}", "probe": "https://registry.npmjs.org/-/v1/search?text=maintainer:{u}&size=5", "detect": "message", "missing_text": ["\"objects\":[]"], "present_text": ["\"objects\":[{"], "tags": ["dev"], "claimed": "isaacs"},
     {"name": "Packagist", "url": "https://packagist.org/users/{u}/", "tags": ["dev"], "claimed": "seldaek"},
     {"name": "Pinterest", "url": "https://www.pinterest.com/{u}/", "probe": "https://www.pinterest.com/resource/UserResource/get/?source_url=/{u}/&data=%7B%22options%22%3A%7B%22username%22%3A%22{u}%22%2C%22field_set_key%22%3A%22profile%22%7D%2C%22context%22%3A%7B%7D%7D", "headers": {"X-Requested-With": "XMLHttpRequest", "Referer": "https://www.pinterest.com/", "X-Pinterest-Source-Url": "/", "X-Pinterest-PWS-Handler": "www/user/[username].js"}, "tags": ["social", "design"], "claimed": "pinterest"},
     {"name": "RubyGems", "url": "https://rubygems.org/profiles/{u}", "probe": "https://rubygems.org/api/v1/profiles/{u}.json", "tags": ["dev"], "claimed": "tenderlove"},
