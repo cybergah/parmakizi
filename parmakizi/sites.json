@@ -27,6 +27,7 @@
     {"name": "Hashnode", "url": "https://hashnode.com/@{u}", "tags": ["dev", "blog"], "claimed": "hashnode", "detect": "message", "missing_text": ["User not found | Hashnode"]},
     {"name": "Hugging Face", "url": "https://huggingface.co/{u}", "probe": "https://huggingface.co/api/users/{u}/overview", "tags": ["dev", "ai"], "claimed": "julien-c"},
     {"name": "Instructables", "url": "https://www.instructables.com/member/{u}/", "tags": ["maker"], "claimed": "randofo"},
+    {"name": "itch.io", "url": "https://{u}.itch.io/", "tags": ["gaming"], "claimed": "leafo"},
     {"name": "Kaggle", "url": "https://www.kaggle.com/{u}", "tags": ["dev", "ai"], "claimed": "jhoward"},
     {"name": "Keybase", "url": "https://keybase.io/{u}", "probe": "https://keybase.io/_/api/1.0/user/lookup.json?usernames={u}", "detect": "message", "missing_text": ["\"them\":[null]", "\"code\":205"], "present_text": ["\"basics\""], "tags": ["security"], "claimed": "chris"},
     {"name": "Lemmy (lemmy.world)", "url": "https://lemmy.world/u/{u}", "probe": "https://lemmy.world/api/v3/user?username={u}", "missing_status": [400, 404], "tags": ["social"], "claimed": "ruud"},
