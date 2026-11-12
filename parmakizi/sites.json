@@ -46,6 +46,7 @@
     {"name": "Telegram", "url": "https://t.me/{u}", "detect": "message", "missing_text": ["tgme_page_icon"], "present_text": ["tgme_page_title"], "regex": "^[A-Za-z][A-Za-z0-9_]{4,31}$", "tags": ["social", "messaging"], "claimed": "durov"},
     {"name": "Trello", "url": "https://trello.com/{u}", "probe": "https://trello.com/1/Members/{u}", "tags": ["dev"], "claimed": "trello"},
     {"name": "TryHackMe", "url": "https://tryhackme.com/p/{u}", "probe": "https://tryhackme.com/api/v2/public-profile?username={u}", "tags": ["security"], "claimed": "tryhackme"},
+    {"name": "Tumblr", "url": "https://{u}.tumblr.com/", "probe": "https://api.tumblr.com/v2/blog/{u}/avatar", "tags": ["blog", "social"], "claimed": "staff"},
     {"name": "Twitch", "url": "https://www.twitch.tv/{u}", "detect": "message", "missing_text": ["content='Twitch is the world"], "tags": ["video"], "claimed": "twitch"},
     {"name": "Vimeo", "url": "https://vimeo.com/{u}", "tags": ["video"], "claimed": "staff"},
     {"name": "VK", "url": "https://vk.com/{u}", "tags": ["social"], "claimed": "durov"},
