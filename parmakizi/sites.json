@@ -32,6 +32,7 @@
     {"name": "Lichess", "url": "https://lichess.org/@/{u}", "probe": "https://lichess.org/api/user/{u}", "tags": ["gaming"], "claimed": "DrNykterstein"},
     {"name": "Lobsters", "url": "https://lobste.rs/~{u}", "tags": ["dev", "social"], "claimed": "pushcx"},
     {"name": "Mastodon (mastodon.social)", "url": "https://mastodon.social/@{u}", "probe": "https://mastodon.social/api/v1/accounts/lookup?acct={u}", "tags": ["social"], "claimed": "Gargron"},
+    {"name": "Medium", "url": "https://medium.com/@{u}", "probe": "https://medium.com/feed/@{u}", "tags": ["blog", "social"], "claimed": "ev"},
     {"name": "Minecraft", "url": "https://namemc.com/profile/{u}", "probe": "https://api.mojang.com/users/profiles/minecraft/{u}", "missing_status": [204, 404], "tags": ["gaming"], "claimed": "Notch"},
     {"name": "Mixcloud", "url": "https://www.mixcloud.com/{u}/", "probe": "https://api.mixcloud.com/{u}/", "tags": ["music"], "claimed": "spartacus"},
     {"name": "Packagist", "url": "https://packagist.org/users/{u}/", "tags": ["dev"], "claimed": "seldaek"},
