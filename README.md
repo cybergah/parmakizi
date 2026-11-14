@@ -86,18 +86,22 @@ print([r.url for r in results if r.status is Status.FOUND])
 
 ## Supported sites
 
-58 platforms, every one verified with `--self-test`:
+87 platforms, every one verified with `--self-test`:
 
-**Developer:** GitHub · GitLab · Codeberg · Gitea · SourceHut · Bitbucket · Docker Hub ·
-crates.io · RubyGems · Packagist · dev.to · Hashnode · Hacker News · Lobsters ·
-Hugging Face · Kaggle · Codeforces · AtCoder · Codewars · Exercism · Scratch ·
-Speaker Deck · Trello · npm  
-**Security:** HackerOne · Bugcrowd · TryHackMe · Keybase  
-**Social:** Telegram · Bluesky · Mastodon · Lemmy · VK · Gravatar · About.me ·
-Duolingo · Gumroad · Wikipedia · Medium · Tumblr · Pinterest  
-**Media:** YouTube · Twitch · Vimeo · SoundCloud · Mixcloud · Flickr · Dribbble ·
-Substack · Wattpad · Instructables · DeviantArt  
-**Gaming:** Steam · Minecraft · Speedrun.com · Chess.com · Lichess · itch.io
+**Developer:** GitHub · GitLab · Codeberg · Gitea · Framagit · Gitee · SourceHut · Bitbucket ·
+Launchpad · Docker Hub · crates.io · RubyGems · Packagist · npm · Hex · NuGet · Anaconda ·
+WordPress.org · dev.to · Hashnode · Hacker News · Lobsters · Python Discourse ·
+Hugging Face · Kaggle · Observable · Hackster · Crowdin · Codeforces · AtCoder · Topcoder ·
+Codewars · Exercism · Scratch · Speaker Deck · Trello  
+**Security:** HackerOne · Bugcrowd · YesWeHack · TryHackMe · Keybase · Infosec Exchange  
+**Social:** Telegram · Bluesky · Mastodon · Fosstodon · Hachyderm · Pixelfed · Lemmy · VK ·
+Gravatar · About.me · Duolingo · Gumroad · Buy Me a Coffee · Wikipedia · OpenStreetMap ·
+Medium · Tumblr · Pinterest  
+**Media:** YouTube · Twitch · Vimeo · Dailymotion · SoundCloud · Mixcloud · Discogs · Genius ·
+Flickr · Dribbble · Behance · DeviantArt · Substack · Wattpad · Instructables · Slides ·
+MyAnimeList  
+**Gaming:** Steam · GOG · Minecraft · osu! · Speedrun.com · Chess.com · Lichess · itch.io ·
+Game Jolt · Kongregate
 
 Run `parmakizi --list-sites` for the full list with URLs. Missing a site?
 [Adding one](https://github.com/cybergah/parmakizi/blob/main/CONTRIBUTING.md) is a single line of JSON.
